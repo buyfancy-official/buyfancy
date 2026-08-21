@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://buyfancy-official.github.io/buyfancy/sitemap.xml
