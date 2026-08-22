@@ -104,35 +104,94 @@
     <p style="margin: 0; font-size: 12px; color: #94a3b8;">Premium & Custom Keychains Store</p>
   </div>
   <!-- Bottom Bar: Left-Aligned Categories & Menu -->
-<nav>
-  <ul style="list-style: none; display: flex; gap: 15px; flex-wrap: wrap; padding: 10px; background: #222; color: #fff;">
-    <li><a href="#home" style="color: white; text-decoration: none;">Home</a></li>
-    
-    <!-- Women Category -->
-    <li>
-      <a href="#women" style="color: white; text-decoration: none;">Women Wear ▼</a>
-      <!-- Sub Categories -->
-      <ul style="background: #333; padding: 10px;">
-        <li><a href="#fashionwear" style="color: white;">Fashionwear</a></li>
-        <li><a href="#hijab-abaya" style="color: white;">Hijab & Abaya</a></li>
-        <li><a href="#shoes" style="color: white;">Women Shoes</a></li>
-        <li><a href="#jewellery" style="color: white;">Jewellery</a></li>
-        <li><a href="#undergarments" style="color: #ff9999;">Undergarments (Non-Returnable)</a></li>
-      </ul>
-    </li>
+<!-- Modern Gen Z Navigation Menu with Smooth Dropdown -->
+<style>
+  .genz-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 12px;
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  }
+  .nav-item {
+    position: relative;
+  }
+  .nav-link {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 16px;
+    display: inline-block;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+  }
+  .nav-link:hover {
+    background: linear-gradient(135deg, #f16521 0%, #e11d48 100%);
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(241, 101, 33, 0.4);
+    transform: translateY(-2px);
+  }
+  /* Floating Dropdown Box */
+  .dropdown-box {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: #0f172a;
+    min-width: 220px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 0;
+    z-index: 999;
+  }
+  .dropdown-box a {
+    color: #94a3b8;
+    padding: 10px 18px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  .dropdown-box a:hover {
+    background: rgba(241, 101, 33, 0.15);
+    color: #f16521;
+    padding-left: 24px;
+  }
+  .nav-item:hover .dropdown-box {
+    display: block;
+    animation: fadeIn 0.2s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
 
-    <!-- Men Category -->
-    <li><a href="#men" style="color: white; text-decoration: none;">Men Wear</a></li>
+<nav class="genz-nav">
+  <div class="nav-item"><a href="#home" class="nav-link">🏠 Home</a></div>
+  <div class="nav-item"><a href="#products" class="nav-link">✨ All Products</a></div>
+  
+  <!-- Women Wear Dropdown -->
+  <div class="nav-item">
+    <a href="#women" class="nav-link">👗 Women Wear <span style="font-size: 10px;">▼</span></a>
+    <div class="dropdown-box">
+      <a href="#fashionwear">💃 Fashionwear</a>
+      <a href="#shoes">👠 Shoes & Footwear</a>
+      <a href="#jewellery">💎 Jewellery</a>
+      <a href="#hijab-abaya">🧕 Hijab & Abaya</a>
+      <a href="#undergarments" style="color: #ff7676; font-weight: bold;">👙 Women Undergarments</a>
+    </div>
+  </div>
 
-    <!-- Kids Category -->
-    <li><a href="#kids" style="color: white; text-decoration: none;">Boys & Girls</a></li>
-
-    <!-- Electronics Category -->
-    <li><a href="#electronics" style="color: white; text-decoration: none;">Electronics</a></li>
-
-    <!-- Policies -->
-    <li><a href="#policies" style="color: white; text-decoration: none;">Delivery & Policies</a></li>
-  </ul>
+  <div class="nav-item"><a href="#men" class="nav-link">👔 Men Wear</a></div>
+  <div class="nav-item"><a href="#kids" class="nav-link">🧸 Boys & Girls</a></div>
+  <div class="nav-item"><a href="#electronics" class="nav-link">⚡ Electronics</a></div>
+  <div class="nav-item"><a href="#policies" class="nav-link" style="color: #38bdf8;">🚚 Delivery & Policies</a></div>
 </nav>
 </header>
 <main class="container" id="products">    
